@@ -1,0 +1,24 @@
+.Welcome {
+    text-align: center;
+}
+ 
+.Welcome-banner {
+    font-family: raleway,century gothic,texgyreadventor,sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(25px + 2vmin);
+    color: black;
+}
+ 
+.Welcom-logbtn {
+    position:absolute;
+    top:0;
+    right:0;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+  
