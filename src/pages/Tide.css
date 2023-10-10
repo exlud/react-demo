@@ -1,8 +1,8 @@
-.Welcome {
+.Tide {
     text-align: center;
 }
  
-.Welcome-banner {
+.Tide-banner {
     font-family: raleway,century gothic,texgyreadventor,sans-serif;
     background-color: white;
     min-height: 100vh;
@@ -14,7 +14,7 @@
     color: black;
 }
  
-.Welcom-logbtn {
+.Tide-home {
     position:absolute;
     top:0;
     right:0;

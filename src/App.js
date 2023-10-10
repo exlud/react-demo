@@ -1,28 +1,29 @@
-import {useState} from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import './App.css';
-import Lab from './pages/Lab';
-import Logging from './pages/Logging';
-import Welcome from './pages/Welcome';
+
+import Hub from './pages/Hub'
+import Tide from './pages/Tide';
+import Md from './pages/Md'
 import NotFound from './pages/NotFound'
-import RoleContext from './component/Role'
+import Lab from './pages/Lab';
+
 
 function App() {
-  const [logged, setLogged] = useState(false);
-  const ctx = {logged, setLogged};
-  console.log({logged});
 
   return (
-    <RoleContext.Provider value={ctx}>
-    <Router>
+    <>
+     <Router>
       <Routes>
-      <Route path="/login" element={<Logging />} />
-      <Route path="/" strict element={<Welcome />} />
-      <Route path="/lab" strict element={<Lab />} />
-      <Route path="*" strict element={<NotFound />} />
+      
+      <Route path="/" strict element={<Hub />} />
+      <Route path="/tide" strict element={<Tide />} />
+      <Route path="/md" strict element={<Md />} />
+      <Route path="/lab/:site" element={<Lab />} />
+      <Route path="*" element={<NotFound page="404"/>} />
     </Routes>
     </Router>
-    </RoleContext.Provider>
+    </>
+
   );
 };
 

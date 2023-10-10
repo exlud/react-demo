@@ -1,3 +1,4 @@
+// try material UI
 import { Helmet } from 'react-helmet';
 import { Link as RouterLink } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
@@ -13,13 +14,9 @@ const StyledContent = styled('div')(({ theme }) => ({
   padding: theme.spacing(12, 0),
 }));
 
-function NotFound() {
+function NotFound(props) {
     return (
         <>
-            <Helmet>
-                <title>Oops!</title>
-            </Helmet>
-
             <Container>
                 <StyledContent sx={{ textAlign: 'center', alignItems: 'center' }}>
                     <Box
@@ -29,7 +26,7 @@ function NotFound() {
                     />
 
                     <Button to="/" size="large" variant="contained" color="warning" component={RouterLink}>
-                        go back
+                        go back to hub
                     </Button>
 
                 </StyledContent>
